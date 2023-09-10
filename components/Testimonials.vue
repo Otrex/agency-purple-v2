@@ -1,5 +1,5 @@
 <template> 
-  <div class="py-[14rem] pt-[8rem]"> 
+  <div id="testimonials" class="py-[14rem] pt-[8rem]"> 
     <div class="b-wrapper" >
       <h2 class="text-center mb-[8.4rem] max-w-[76rem] mx-auto pb-[2rem] text-gradient">What Our Partners Are saying</h2>
 

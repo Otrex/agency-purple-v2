@@ -1,9 +1,9 @@
 <template> 
-  <div class="bg-[#14071B] text-white pt-[7rem]"> 
+  <div id="footer" class="bg-[#14071B] text-white pt-[7rem]"> 
     <div class="flex flex-col sm:flex-row pb-[5rem] b-wrapper gap-[2rem]">
       <div class="w-full">
         <div class="max-w-[18rem] max-h-[5rem]"> 
-          <img src="/img/logo-light.svg" class="w-full h-full object-cover" />
+          <img :src="logo" class="w-full h-full object-cover" />
         </div>
       </div>
       <div class="w-full">
@@ -25,7 +25,7 @@
           <p class="text-[#626262] mb-[1rem]">Connect with us:</p>
           <ul class="flex flex-row gap-[2.6rem]"> 
             <li>
-              <a :href="footer.facebook" id="fb">
+              <a :href="footer.facebook" id="fb" target="_blank">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_1317_3281)">
                 <path d="M4.38226 0C1.95468 0 0 1.95468 0 4.38226V19.6178C0 22.0453 1.95468 24 4.38226 24H12.6398V14.6175H10.1588V11.2395H12.6398V8.35351C12.6398 6.08611 14.1057 4.00426 17.4825 4.00426C18.8497 4.00426 19.8608 4.13551 19.8608 4.13551L19.7813 7.29002C19.7813 7.29002 18.7501 7.28028 17.625 7.28028C16.4073 7.28028 16.212 7.84135 16.212 8.77279V11.2395H19.878L19.7183 14.6175H16.212V24H19.6177C22.0453 24 24 22.0454 24 19.6178V4.38228C24 1.9547 22.0453 2.4e-05 19.6177 2.4e-05H4.38223L4.38226 0Z" fill="#626262"/>
@@ -40,7 +40,7 @@
             </a></li>
 
             <li>
-              <a :href="footer.instagram" id="ins">
+              <a :href="footer.instagram" id="ins" target="_blank">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_1317_3283)">
                 <path d="M12 8C10.9391 8 9.92172 8.42143 9.17157 9.17157C8.42143 9.92172 8 10.9391 8 12C8 13.0609 8.42143 14.0783 9.17157 14.8284C9.92172 15.5786 10.9391 16 12 16C13.0609 16 14.0783 15.5786 14.8284 14.8284C15.5786 14.0783 16 13.0609 16 12C16 10.9391 15.5786 9.92172 14.8284 9.17157C14.0783 8.42143 13.0609 8 12 8Z" fill="#626262"/>
@@ -56,7 +56,7 @@
 
 
             <li>
-              <a :href="footer.twitter" id="tw">
+              <a :href="footer.twitter" id="tw" target="_blank">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M23.8372 5.14419C22.9659 5.54027 22.0266 5.80055 21.0534 5.92503C22.0492 5.32525 
                 22.8187 4.37466 23.1809 3.23168C22.2416 3.79751 21.2005 4.19359 20.1028 4.41992C19.2087 
@@ -72,7 +72,7 @@
             </a></li>
 
             <li>
-              <a :href="footer.linkedin" id="ln">
+              <a :href="footer.linkedin" id="ln" target="_blank">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_1317_3288)">
                 <path d="M4.70556 0.00585938C2.12036 0.00585938 0.0045166 2.12165 0.0045166 4.70691V19.2951C0.0045166 21.8803 2.12031 23.9954 4.70556 23.9954H19.2937C21.879 23.9954 23.994 21.8803 23.994 
@@ -106,6 +106,7 @@
 <script setup lang="ts"> 
 import { WizardResponse } from '~/type';
 const props = defineProps<{ data?: WizardResponse }>();
+const logo = computed(() => props.data?.agency_wizard.website_details.logo || '/img/logo-light.svg');
 const agencyName = computed(() => props.data?.agency_wizard.website_details.agencyName || "AgencyAI")
 const footer = computed(() => {
   const address = props.data?.agency_wizard.contact.address.address1 || props.data?.agency_wizard.contact.address.address2 || "48180, Eureka Rd, Taylor, Michigan, USA";

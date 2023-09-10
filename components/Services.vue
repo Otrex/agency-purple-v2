@@ -1,5 +1,5 @@
 <template> 
-  <div class=" text-black py-[10rem]">
+  <div id="services" class=" text-black py-[10rem]">
     <div class="b-wrapper">
       <h2 class=" text-center mb-[8rem] text-gradient-180">Our Services</h2>
 

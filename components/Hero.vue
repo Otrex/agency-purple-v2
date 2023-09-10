@@ -1,5 +1,5 @@
 <template> 
-<div class="bg-gradient relative !text-white"> 
+<div id="hero" class="bg-gradient relative !text-white"> 
   <svg width="868" class="w-[50%] right-0 absolute" height="313" viewBox="0 0 868 313" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect x="2.21777" y="-210.03" width="914.325" height="327.032" rx="22.5" stroke="#E1E1E1" stroke-opacity="0.2" stroke-width="3" stroke-dasharray="10 10"/>
   <rect x="433.303" y="-89.6392" width="914.325" height="327.032" rx="22.5" stroke="#E1E1E1" stroke-opacity="0.2" stroke-width="3" stroke-dasharray="10 10"/>

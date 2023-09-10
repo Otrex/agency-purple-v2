@@ -1,5 +1,5 @@
 <template> 
-  <div class="py-[10rem] bg-[#F5F7FF] overflow-hidden"> 
+  <div id="about" class="py-[10rem] bg-[#F5F7FF] overflow-hidden"> 
     <section class="flex sm:flex-row flex-col relative gap-[4rem] b-wrapper "> 
       <div class="w-full h-full pt-[7rem]">
         <div class="rounded-[2rem] relative z-[1] w-full"> 
