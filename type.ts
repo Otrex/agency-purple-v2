@@ -18,6 +18,9 @@ export interface AgencyWizard {
   leads_collector: string | null;
   preview_ui: string;
   created_at: Date;
+
+  logo_light: string | null;
+  phone_number: string | null;
 }
 
 export interface Contact {

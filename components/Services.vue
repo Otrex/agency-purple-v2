@@ -21,7 +21,7 @@
 
       <div class="text-center mt-[16rem] flex flex-col gap-[3rem] items-center "> 
         <a style="border-radius: 20px !important; font-weight: 500 !important;" class="b-btn md border border-solid border-[#B7B7B7] font-semibold text-black">And Others</a>
-        <a style="padding-left: 8rem !important; font-weight: 500 !important; padding-right: 8rem !important;" class="b-btn md accent !px-[8rem] font-semibold">Lets Talk</a>
+        <a style="padding-left: 8rem !important; font-weight: 500 !important; padding-right: 8rem !important;" href="#consult" class="b-btn md accent !px-[8rem] font-semibold">Lets Talk</a>
       </div>
     </div>
   </div>
